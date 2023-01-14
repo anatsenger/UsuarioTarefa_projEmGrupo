@@ -1,6 +1,6 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
-import com.example.demo.Service.TarefaService;
+import com.example.demo.service.TarefaService;
 import com.example.demo.model.Tarefa;
 
 import com.example.demo.model.Usuario;

@@ -1,4 +1,4 @@
-package com.example.demo.Repository;
+package com.example.demo.repository;
 
 import com.example.demo.model.Tarefa;
 import com.example.demo.model.Usuario;

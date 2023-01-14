@@ -1,6 +1,6 @@
-package com.example.demo.Service;
+package com.example.demo.service;
 
-import com.example.demo.Repository.TarefaRepository;
+import com.example.demo.repository.TarefaRepository;
 import com.example.demo.model.Tarefa;
 import com.example.demo.model.Usuario;
 import org.springframework.stereotype.Service;
