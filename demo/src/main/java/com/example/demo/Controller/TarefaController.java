@@ -37,7 +37,8 @@ public class TarefaController {
         return tarefaService.listar();
     }
 
-    public List<Tarefa> listarPorResponsavel(Usuario usuario){
-        return tarefaService.listarUsuario(usuario);
+    @GetMapping("/{id}")
+    public List<Tarefa> listarPorResponsavel(@PathVariable Usuario usuario){
+        return tarefaService.listarPorUsuario(usuario);
     }
 }

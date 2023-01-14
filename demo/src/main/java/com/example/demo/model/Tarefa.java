@@ -1,9 +1,6 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -12,15 +9,15 @@ public class Tarefa {
     @Id
     @GeneratedValue
     private Long id;
-    private String nomeUsuario;
-    private String senha;
-    private String Email;
-    private String nomeCompleto;
-    @OneToOne
-    private Endereco endereco;
-    private LocalDate dataNascimento;
-    private String genero;
-    private String numeroTelefone;
+    private String descricao;
+    private String status;
+    private LocalDate dataCriacao;
+    private LocalDate dataVencimento;
+    private Integer prioridade;
+    @ManyToOne
+    private Usuario responsavel;
+    private String projeto;
+    private String etiquetas;
 
     public Long getId() {
         return id;
@@ -30,68 +27,68 @@ public class Tarefa {
         this.id = id;
     }
 
-    public String getNomeUsuario() {
-        return nomeUsuario;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getStatus() {
+        return status;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getEmail() {
-        return Email;
+    public LocalDate getDataCriacao() {
+        return dataCriacao;
     }
 
-    public void setEmail(String email) {
-        Email = email;
+    public void setDataCriacao(LocalDate dataCriacao) {
+        this.dataCriacao = dataCriacao;
     }
 
-    public String getNomeCompleto() {
-        return nomeCompleto;
+    public LocalDate getDataVencimento() {
+        return dataVencimento;
     }
 
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
+    public void setDataVencimento(LocalDate dataVencimento) {
+        this.dataVencimento = dataVencimento;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public Integer getPrioridade() {
+        return prioridade;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setPrioridade(Integer prioridade) {
+        this.prioridade = prioridade;
     }
 
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
+    public Usuario getResponsavel() {
+        return responsavel;
     }
 
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setResponsavel(Usuario responsavel) {
+        this.responsavel = responsavel;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getProjeto() {
+        return projeto;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setProjeto(String projeto) {
+        this.projeto = projeto;
     }
 
-    public String getNumeroTelefone() {
-        return numeroTelefone;
+    public String getEtiquetas() {
+        return etiquetas;
     }
 
-    public void setNumeroTelefone(String numeroTelefone) {
-        this.numeroTelefone = numeroTelefone;
+    public void setEtiquetas(String etiquetas) {
+        this.etiquetas = etiquetas;
     }
 }
 
